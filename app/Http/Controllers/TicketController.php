@@ -21,6 +21,10 @@ class TicketController extends Controller
     }
 
     //Update
+    public function viewTicketById($id){
+        $ticket = Ticket::find($id);
+        return view('edit-ticket',compact("ticket"));
+    }
 
     //Delete
 }

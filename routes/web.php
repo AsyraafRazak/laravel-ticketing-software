@@ -26,3 +26,9 @@ Route::post('/save-ticket', [App\Http\Controllers\TicketController::class, 'crea
 Route::get('/create-ticket', function() {
     return view('create-ticket');
 })->middleware('auth');
+
+Route::get('/issue-ticket', function() {
+    return view('issue-ticket');
+});
+
+Route::get('/edit-ticket/{id}',[App\Http\Controllers\TicketController::class, 'viewTicketById'])->middleware('auth');
