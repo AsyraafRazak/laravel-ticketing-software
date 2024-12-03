@@ -14,6 +14,7 @@
                         {{ session('status') }}
                     </div>
                     @endif
+                    <a href="/create-ticket" class="btn btn-success float-right mb-2" style="float: right;">Create Ticket</a>
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>

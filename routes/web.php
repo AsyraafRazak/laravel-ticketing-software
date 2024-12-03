@@ -21,3 +21,8 @@ Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\TicketController::class, 'readAllTicket'])->name('home');
+Route::post('/save-ticket', [App\Http\Controllers\TicketController::class, 'createTicket']);
+
+Route::get('/create-ticket', function() {
+    return view('create-ticket');
+});

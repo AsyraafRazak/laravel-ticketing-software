@@ -8,6 +8,10 @@ use App\Models\Ticket;
 class TicketController extends Controller
 {
     //Create
+    public function createTicket(Request $request){
+        Ticket::create($request->all());
+        return redirect('/home');
+    }
 
     //Read
     public function readAllTicket(){
