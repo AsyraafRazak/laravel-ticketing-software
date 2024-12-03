@@ -40,4 +40,9 @@ class TicketController extends Controller
     }
 
     //Delete
+    public function deleteTicketById($id){
+        $ticket = Ticket::find($id);
+        $ticket->delete();
+        return redirect('/home');
+    }
 }

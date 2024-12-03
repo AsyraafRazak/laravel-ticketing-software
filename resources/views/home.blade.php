@@ -44,7 +44,7 @@
                                 <td>{{$ticket->updated_at}}</td>
                                 <td>
                                     <a class="btn btn-info text-white btn-block" href="/edit-ticket/{{$ticket->id}}">Edit</a>
-                                    <a class="btn btn-danger text-white btn-block" href="">Delete</a>
+                                    <a class="btn btn-danger text-white btn-block" href="/delete-ticket/{{$ticket->id}}">Delete</a>
                                 </td>
                             </tr>
                             @endforeach

@@ -33,3 +33,4 @@ Route::get('/issue-ticket', function() {
 
 Route::get('/edit-ticket/{id}',[App\Http\Controllers\TicketController::class, 'viewTicketById'])->middleware('auth');
 Route::post('/save-modified/{id}', [App\Http\Controllers\TicketController::class, 'modifyTicket'])->middleware('auth');
+Route::get('/delete-ticket/{id}', [App\Http\Controllers\TicketController::class, 'deleteTicketById'])->middleware('auth');
