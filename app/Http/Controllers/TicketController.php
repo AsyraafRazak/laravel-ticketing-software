@@ -26,5 +26,18 @@ class TicketController extends Controller
         return view('edit-ticket',compact("ticket"));
     }
 
+    public function modifyTicket($id, Request $request){
+        $ticket = Ticket::find($id);
+        $ticket->name = $request->name;
+        $ticket->phone = $request->phone;
+        $ticket->email = $request->email;
+        $ticket->status = $request->status;
+        $ticket->level = $request->level;
+        $ticket->msg = $request->msg;
+        $ticket->save();
+
+        return redirect('/home');
+    }
+
     //Delete
 }

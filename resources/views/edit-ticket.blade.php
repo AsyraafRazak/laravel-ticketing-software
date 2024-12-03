@@ -16,7 +16,7 @@
 
                     <div class="container mt-5">
                         <h2 class="mb-4">Input Form</h2>
-                        <form method="post" action="/save-ticket">
+                        <form method="post" action="/save-modified/{{$ticket->id}}">
                             @csrf
                             <!-- First Row -->
                             <div class="form-row">
@@ -47,7 +47,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label for="status">Status</label>
-                                    <input type="text" class="form-control" name="status" id="status" placeholder="Status" value="{{$ticket->status}}" readonly>
+                                    <input type="text" class="form-control" name="status" id="status" placeholder="Status" value="{{$ticket->status}}">
                                 </div>
                             </div>
 
